@@ -7,7 +7,7 @@ const {
 module.exports = {
   mode: "production",
   entry: {
-    // vendor:['jquery','./src/js/common.js'],
+    vendor:['jquery','./src/js/common.js'],
     cart: path.resolve(__dirname, './src/js/cart.js'),
     index: path.resolve(__dirname, './src/js/index.js')
   },
@@ -47,5 +47,18 @@ module.exports = {
       chunks: ['cart']
     })
   ],
-  devtool:"#source-map"
+  optimization:{
+    minimize: true,
+    splitChunks:{
+      cacheGroups: {
+        commons: {
+          name: "vendor",
+          chunks: "all",
+          automaticNameDelimiter: '~',
+          minChunks: 2
+        }
+      }
+    }
+  }
+  // devtool:"#source-map"
 }
