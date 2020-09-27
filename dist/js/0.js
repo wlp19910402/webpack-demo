@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[0],[function(n,o,i){var c,t;c=[i(0),i(7)],void 0===(t=function(n,o){return{initIndex:function(){console.log("common init index"),o(function(){console.log("jquery console log")})},initCart:function(){console.log("common init cart")}}}.apply(o,c))||(n.exports=t)}]]);
