@@ -39,13 +39,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "./src/index.html",
-      chunks: ['index']
+      chunks: ['index','vendor']
     }),
     new HtmlWebpackPlugin({
       filename: "cart.html",
       template: "./src/cart.html",
       chunks: ['cart']
     })
-  ]
-  // devtool:"#source-map "
+  ],
+  devtool:"#source-map"
 }
